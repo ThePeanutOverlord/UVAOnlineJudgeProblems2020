@@ -19,3 +19,4 @@ lines.
 | 2 | [input](./input)   | Input file |
 
 ### Sources:
+I was kinda lost but [this](https://programmersought.com/article/2580321656/) gave me an idea of how to do it
