@@ -103,8 +103,11 @@ int main()
       cout << "1 pile remaining: ";
     else
       cout << ans << " piles remaining: ";
-    for (int i = 0; i < ans; i++)
-      cout << V[i].size() << " ";
+    for (int i = 0; i < ans; i++){
+      cout << V[i].size(); 
+      if(i+1 != ans)
+        cout << " ";
+    }
     cout << "\n";
   }
 }
