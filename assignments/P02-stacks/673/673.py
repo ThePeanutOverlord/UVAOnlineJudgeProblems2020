@@ -13,7 +13,7 @@
 #
 # Files:           673.py
 #                  input
-#
+
 
 count = input()
 ​
