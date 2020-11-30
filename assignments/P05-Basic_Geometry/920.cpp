@@ -1,3 +1,20 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// Author:           Paige Champagne
+// Email:            paigechamp@gmail.com
+// Label:            920 - Sunny Mountains
+// Course:           CMPS 4883
+// Semester:         Fall 2020
+//
+// Description:
+//       solves 920 (see attached files for more info)
+//
+// Usage:
+//       run with input file
+//
+// Files:           122.cpp
+//                  input
+/////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 #include <math.h>
 #include <iomanip>
