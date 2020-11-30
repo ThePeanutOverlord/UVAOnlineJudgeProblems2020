@@ -19,6 +19,10 @@ only take constant time.
 | :----: | ----------------------------------- | -------------------------------------- |
 | 1 | [540.cpp](./540.cpp)   | Solution file |
 | 2 | [input](./input)   | Input file |
+| 3 | [input 2](./input2)   | Input file |
 
 ### Sources:
 https://www.geeksforgeeks.org/deque-cpp-stl/
+
+It took me a long time to even understood the problem because it didn't quite make sense to me where they were
+dequeuing to get the results they were getting but I got it eventually. 
