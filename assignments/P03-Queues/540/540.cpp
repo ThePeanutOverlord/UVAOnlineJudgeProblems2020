@@ -26,7 +26,7 @@ int main() {
   int trycounter = 1;  
 
   while(teamcount != 0){
-    cout << "in main loop\n";
+   // cout << "in main loop\n";
     string cmnd;
     deque <deque<string>> line;
     deque <string> team;
@@ -44,7 +44,7 @@ int main() {
     
     cin >> cmnd;
     while(cmnd != "STOP"){
-      cout <<"in cmnd loop\n";
+     // cout <<"in cmnd loop\n";
      
       if(cmnd == "ENQUEUE"){
         string a;

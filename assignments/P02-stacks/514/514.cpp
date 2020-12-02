@@ -21,26 +21,31 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int n, x;
 
-    while (1){
+    while (1)
+    {
         stack<int> stack1, stack2;
         scanf("%d", &n);
         if (n == 0)
             break;
 
-        while (1){
+        while (1)
+        {
             int i = n;
             scanf("%d", &x);
-            if (x == 0){
+            if (x == 0)
+            {
                 printf("\n");
                 break;
             }
 
             stack1.push(x);
 
-            for (int i = 1; i < n; i++){
+            for (int i = 1; i < n; i++)
+            {
                 scanf("%d", &x);
                 stack1.push(x);
             }
