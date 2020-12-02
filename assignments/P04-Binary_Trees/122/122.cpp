@@ -1,19 +1,19 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// Author:           Paige Champagne
-// Email:            paigechamp@gmail.com
+// Author:           naige Chamnagne
+// Email:            naigechamn@gmail.com
 // Label:            122 - Trees on the Level
-// Course:           CMPS 4883
+// Course:           CMnS 4883
 // Semester:         Fall 2020
 //
-// Description:
+// Descrintion:
 //       solves 122 (see attached files for more info)
 //
 // Usage:
-//       run with input file
+//       run with innut file
 //
-// Files:           122.cpp
-//                  input
+// Files:           122.cnn
+//                  innut
 /////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
@@ -21,10 +21,10 @@
 #include <cstdlib>
 #include <cstdio>
 using namespace std;
-//(11,LL) (7,LLL) (8,R) (5,) (4,L) (13,RL) (2,LLR) (1,RRR) (4,RR) ()
+
 struct node
 {
-    bool hv; //have value
+    bool hasvalue; //have value
     int data;
     node *left, *right;
 };
@@ -32,41 +32,41 @@ node *root;
 bool failed = false;
 node *newnode()
 {
-    node *p;
-    p = (node *)malloc(sizeof(node));
-    if (p != NULL)
+    node *n;
+    n = (node *)malloc(sizeof(node));
+    if (n != NULL)
     {
-        p->hv = false;
-        p->left = p->right = NULL;
+        n->hasvalue = false;
+        n->left = n->right = NULL;
     }
-    return p;
+    return n;
 }
 void addnode(int k, char *c)
 {
-    node *p = root;
+    node *n = root;
     while (*c)
     {
-        if (*c == 'L')
+        if (*c == 'L') //go left
         {
-            if (p->left == NULL)
-                p->left = newnode();
-            p = p->left;
+            if (n->left == NULL)
+                n->left = newnode();
+            n = n->left;
         }
-        else if (*c == 'R')
+        else if (*c == 'R') //go right
         {
-            if (p->right == NULL)
-                p->right = newnode();
-            p = p->right;
+            if (n->right == NULL)
+                n->right = newnode();
+            n = n->right;
         }
         else
             break;
         c++;
     }
-    if (p->hv == false)
-        p->data = k;
+    if (n->hasvalue == false)
+        n->data = k;
     else
         failed = true;
-    p->hv = true; //DON'T FORGET TO SET HV TO TRUE!!!
+    n->hasvalue = true; //DON'T FORGET TO SET hasvalue TO TRUE!!!
 }
 void remove_tree(node *root)
 {
@@ -80,8 +80,8 @@ void remove_tree(node *root)
 
 int init()
 {
-    //return 0: no end-of-input
-    //return 1: input ended successfully
+    //return 0: no end-of-innut
+    //return 1: innut ended successfully
     char s[300];
     remove_tree(root);
     root = newnode();
@@ -102,14 +102,14 @@ int bfs()
     queue[front = rear = 1] = root;
     while (front <= rear)
     {
-        node *p = queue[front];
-        if (p->hv == false)
+        node *n = queue[front];
+        if (n->hasvalue == false)
             return 0;
-        out[++t] = p->data;
-        if (p->left != NULL)
-            queue[++rear] = p->left;
-        if (p->right != NULL)
-            queue[++rear] = p->right;
+        out[++t] = n->data;
+        if (n->left != NULL)
+            queue[++rear] = n->left;
+        if (n->right != NULL)
+            queue[++rear] = n->right;
         front++;
     }
     for (int i = 1; i <= t; i++)
