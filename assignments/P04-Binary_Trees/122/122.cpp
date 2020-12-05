@@ -1,19 +1,19 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// Author:           naige Chamnagne
-// Email:            naigechamn@gmail.com
+// Author:           Paige Chamagpne
+// Email:            paigechamp@gmail.com
 // Label:            122 - Trees on the Level
-// Course:           CMnS 4883
+// Course:           CMPS 4883
 // Semester:         Fall 2020
 //
-// Descrintion:
+// Description:
 //       solves 122 (see attached files for more info)
 //
 // Usage:
-//       run with innut file
+//       run with input file
 //
-// Files:           122.cnn
-//                  innut
+// Files:           122.cpp
+//                  input
 /////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
@@ -68,6 +68,7 @@ void addnode(int k, char *c)
         failed = true;
     n->hasvalue = true; //DON'T FORGET TO SET hasvalue TO TRUE!!!
 }
+
 void remove_tree(node *root)
 {
     if (root != NULL)
@@ -95,6 +96,7 @@ int init()
     }
     return 0;
 }
+
 int bfs()
 {
     node *queue[300];
@@ -117,6 +119,7 @@ int bfs()
     cout << endl;
     return 1;
 }
+
 int main()
 {
     while (init() == 1)

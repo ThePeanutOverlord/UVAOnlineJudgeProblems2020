@@ -19,4 +19,4 @@ lines.
 | 2 | [input](./input)   | Input file |
 
 ### Sources:
-I was kinda lost but after I understood what the problem wanted it wasn't too hard
+https://www.cplusplus.com/reference/vector/vector/

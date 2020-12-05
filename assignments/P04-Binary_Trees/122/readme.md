@@ -24,5 +24,5 @@ no more than 256 nodes. Input is terminated by end-of-file.
 | 3 | [input 2](./input2)   | Input file |
 
 ### Sources:
-I looked around at some different solutions because I was stuck on what even to do and settled on making a
-tree out of a linked list. I got the answer wrong at first because I forgot to check it was uDebug but I found the issue rather quickly and solved it.
+http://www.cplusplus.com/reference/cstdio/scanf/
+https://www.geeksforgeeks.org/strcmp-in-c-cpp/
