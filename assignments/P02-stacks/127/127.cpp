@@ -22,7 +22,7 @@ using namespace std;
 
 struct Card
 {
-  char Value; //card Valueue
+  char Value; //card Value
   char suit;  //card color
 };
 
@@ -40,9 +40,8 @@ int main()
   int i;
   Card Deck[52];                   //main holder of the deck
   vector<stack<Card>> DecksHolder; //Vector of stacks of cards
-  
 
-  while (cin >> str && str != "#")
+  while (cin >> str && str != "#") //while getting input
   {
     i = 0;
     Deck[i].Value = str[0];

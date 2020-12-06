@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// Author:           Paige Chamagpne
+// Author:           Paige Champagne
 // Email:            paigechamp@gmail.com
 // Label:            122 - Trees on the Level
 // Course:           CMPS 4883
@@ -17,45 +17,47 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <string>
+#include <queue>
 #include <cstring>
 #include <cstdlib>
 #include <cstdio>
 using namespace std;
 
-struct node
-{
-    bool hasvalue; //have value
-    int data;
-    node *left, *right;
-};
-node *root;
 bool failed = false;
-node *newnode()
+// Linked list node
+struct ListNode
 {
-    node *n;
-    n = (node *)malloc(sizeof(node));
-    if (n != NULL)
-    {
-        n->hasvalue = false;
-        n->left = n->right = NULL;
-    }
-    return n;
+    int data;
+    bool hasvalue;
+    ListNode *left, *right;
+};
+
+ListNode *root;
+// method to create a new binary tree node from the given data
+ListNode *newNode(int data)
+{
+    ListNode *temp = new ListNode;
+    temp->data = data;
+    temp->left = temp->right = NULL;
+    return temp;
 }
+
 void addnode(int k, char *c)
 {
-    node *n = root;
+    ListNode *n = new ListNode;
     while (*c)
     {
         if (*c == 'L') //go left
         {
             if (n->left == NULL)
-                n->left = newnode();
+                n->left = newNode(k);
             n = n->left;
         }
         else if (*c == 'R') //go right
         {
             if (n->right == NULL)
-                n->right = newnode();
+                n->right = newNode(k);
             n = n->right;
         }
         else
@@ -68,8 +70,7 @@ void addnode(int k, char *c)
         failed = true;
     n->hasvalue = true; //DON'T FORGET TO SET hasvalue TO TRUE!!!
 }
-
-void remove_tree(node *root)
+void remove_tree(ListNode *root)
 {
     if (root != NULL)
     {
@@ -78,17 +79,14 @@ void remove_tree(node *root)
         free(root);
     }
 }
-
 int init()
 {
-    //return 0: no end-of-innut
-    //return 1: innut ended successfully
     char s[300];
     remove_tree(root);
-    root = newnode();
+    root = new ListNode;
     while (scanf("%s", s) == 1)
     {
-        if (strcmp(s, "()") == 0)
+        if (strcmp(s, "()") == 0) //helps eliminate unneeded input
             return 1;
         int d;
         sscanf(&s[1], "%d", &d);
@@ -99,12 +97,12 @@ int init()
 
 int bfs()
 {
-    node *queue[300];
+    ListNode *queue[300]; //max items
     int front, rear, out[300], t = 0;
     queue[front = rear = 1] = root;
     while (front <= rear)
     {
-        node *n = queue[front];
+        ListNode *n = queue[front];
         if (n->hasvalue == false)
             return 0;
         out[++t] = n->data;
@@ -119,7 +117,7 @@ int bfs()
     cout << endl;
     return 1;
 }
-
+//took a more function-oriented approach with this one since it's so complicated
 int main()
 {
     while (init() == 1)

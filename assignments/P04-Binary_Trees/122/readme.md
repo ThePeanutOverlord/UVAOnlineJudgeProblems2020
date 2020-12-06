@@ -24,5 +24,6 @@ no more than 256 nodes. Input is terminated by end-of-file.
 | 3 | [input 2](./input2)   | Input file |
 
 ### Sources:
+https://www.geeksforgeeks.org/given-linked-list-representation-of-complete-tree-convert-it-to-linked-representation/
 http://www.cplusplus.com/reference/cstdio/scanf/
 https://www.geeksforgeeks.org/strcmp-in-c-cpp/
