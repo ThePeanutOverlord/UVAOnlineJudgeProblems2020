@@ -12,7 +12,7 @@
 // Usage:
 //       run with input file
 //
-// Files:           122.cpp
+// Files:           920.cpp
 //                  input
 /////////////////////////////////////////////////////////////////////////////////
 #include <iostream>

@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
-//
-// Author:           Paige Chamagpne
+//                   
+// Author:           Paige Champagne
 // Email:            paigechamp@gmail.com
 // Label:            11172 - Relational Operator
 // Course:           CMPS 4883
@@ -17,27 +17,20 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+
 using namespace std;
 
 int main() {
-int count;
-int a, b;
-
-cin >> count;
-
-for(int i = 0; i < count; i++){
-  cin >> a;
-  cin >> b;
-
-  if(a == b){
-    cout << "=\n";
-  }else if(a > b){
-    cout << ">\n";
-  }else{
-    cout << "<\n";
+  int t,l,r=0;
+  cin >> t;
+  for(int i=0;i<t;i++){
+      cin>>l>>r;
+      if(l<r){
+          cout<<"<\n";
+      }else if(l>r){
+          cout<<">\n";
+      }else{
+          cout<<"=\n";
+      }
   }
-
-}
-
-
 }
