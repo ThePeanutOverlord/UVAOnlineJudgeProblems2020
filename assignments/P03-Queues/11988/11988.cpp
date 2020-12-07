@@ -15,6 +15,23 @@
 // Files:           127.cpp
 //                  input
 /////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+//
+// Author:           Paige Champagne
+// Email:            paigechamp@gmail.com
+// Label:            11988 - broken keyboard
+// Course:           CMPS 4883
+// Semester:         Fall 2020
+//
+// Description:
+//       solves 11988 (see attached files for more info)
+//
+// Usage:
+//       run with input file
+//
+// Files:           127.cpp
+//                  input
+/////////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
 #include <list>
